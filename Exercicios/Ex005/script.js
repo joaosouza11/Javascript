@@ -53,7 +53,7 @@ function ready() {
         sum += values[pos]
         avg = sum / values.length
       }
-      
+
       res.innerHTML = ''
       res.innerHTML += `<p>We have ${total} elements in total</p>`
       res.innerHTML += `<p>The biggest values is ${big}</p>`
@@ -61,4 +61,21 @@ function ready() {
       res.innerHTML += `<p>The result of the sum is ${sum}</p>`
       res.innerHTML += `<p>The average is ${avg.toFixed(2)}</p>`
     }
+}
+
+function clear() {
+  var selectObject = document.getElementById("txtlist");
+  for (var i = 0; i < selectObject.length; i++) {
+    if (selectObject.options[i])
+        selectObject.remove(i)
+  }
+
+  /*
+  list = []
+  values = []
+  list.innerHTML = ''
+
+  let delItem = document.querySelectorAll('option')
+  delItem.remove()
+  */
 }
