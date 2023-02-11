@@ -63,19 +63,14 @@ function ready() {
     }
 }
 
+const clearBtn = document.querySelector('.btn-clear')
+
+clearBtn.addEventListener("click", clear); 
+
 function clear() {
-  var selectObject = document.getElementById("txtlist");
-  for (var i = 0; i < selectObject.length; i++) {
-    if (selectObject.options[i])
-        selectObject.remove(i)
-  }
-
-  /*
-  list = []
+  const options = document.getElementById("txtlist")
+  const res = document.getElementById("res")
+  res.innerHTML = ''
+  options.innerHTML = ''
   values = []
-  list.innerHTML = ''
-
-  let delItem = document.querySelectorAll('option')
-  delItem.remove()
-  */
 }
